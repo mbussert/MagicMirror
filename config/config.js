@@ -92,23 +92,6 @@ let config = {
 				lat: 42.460597,
 				lon: -83.651491
 			}
-		},
-		{
-			module: "MMM-SmartTouch",
-			position: "bottom_center",
-			config: {}
-		},
-		{
-			module: "MMM-CalendarExt3",
-			position: "bottom_bar",
-			config: {
-				mode: "month",
-				instanceId: "basicCalendar",
-				locale: "en-US",
-				maxEventLines: 5,
-				firstDayOfWeek: 1,
-				calendarSet: ["us_holiday"]
-			}
 		}
 	]
 };
