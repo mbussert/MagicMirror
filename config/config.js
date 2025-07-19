@@ -47,7 +47,13 @@ let config = {
 		},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				timeFormat: 12,
+				timezone: "America/New_York",
+				displaySeconds: false,
+				showPeriodUpper: true,
+			}
 		},
 		{
 			module: "calendar",
