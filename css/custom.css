@@ -34,7 +34,7 @@
   left: var(--gap-body-left);
   width: calc(100vw - var(--gap-body-left) - var(--gap-body-right));
   height: calc(100vh - var(--gap-body-top) - var(--gap-body-bottom));
-  background: url("imgs/background2.jpg") no-repeat center center fixed;
+  background: url("imgs/background3.jpg") no-repeat center center fixed;
   background-size: cover;
   border-radius: 30px;
 
