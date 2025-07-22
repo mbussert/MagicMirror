@@ -105,24 +105,6 @@ let config = {
 				lat: 42.460597,
 				lon: -83.651491
 			}
-		},
-		{
-			module: "MMM-Wallpaper",
-			position: "fullscreen_below",
-			config: {
-				updateInterval: 0,
-				unsplashAPIKey: "t-MSdzuBbn3d-CGBLzPbrYVSBMkNX41cIq8hmQnHSVk",
-				query: false,
-				collectionIDs: false,
-				userName: false,
-				photoID: false,
-				autoDim: true,
-				brightImageOpacity: 0.85,
-				imageOrientation: "landscape",
-				imageWidth: "auto",
-				imageHeight: "auto",
-				imageOptions: "fit=fill&fill=blur"
-			}
 		}
 	]
 };
