@@ -28,15 +28,10 @@ let config = {
 	httpsCertificate: "", // HTTPS Certificate path, only require when useHttps is true
 
 	language: "en",
-	locale: "en-US", // this variable is provided as a consistent location
-	// it is currently only used by 3rd party modules. no MagicMirror code uses this value
-	// as we have no usage, we  have no constraints on what this field holds
-	// see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
-
+	locale: "en-US",
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
-	timeFormat: 24,
+	timeFormat: 12,
 	units: "imperial",
-
 	modules: [
 		{
 			module: "alert"
@@ -56,22 +51,40 @@ let config = {
 			}
 		},
 		{
-			module: "calendar",
-			header: "US Holidays",
+			module: "MMM-Todoist",
 			position: "top_left",
+			header: "Todo",
 			config: {
-				broadcastPastEvents: true,
-				calendars: [
-					{
-						fetchInterval: 7 * 24 * 60 * 60 * 1000,
-						symbol: "calendar-check",
-						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics",
-						color: "red",
-						name: "us_holiday"
-					}
-				]
+				hideWhenEmpty: false,
+				accessToken: "a27b456c40049b64dcd0ee956a825b690a3136e0",
+				maximumEntries: 60,
+				updateInterval: 5 * 60 * 1000,
+				displayAvatar: true,
+				showProject: false,
+				displayTasksWithinDays: 0,
+				maxTitleLength: 40,
+				wrapEvents: true,
+				fade: false,
+				projects: ["6cQfqG8Ww3wQC7FJ"]
 			}
 		},
+		// {
+		// 	module: "calendar",
+		// 	header: "US Holidays",
+		// 	position: "top_left",
+		// 	config: {
+		// 		broadcastPastEvents: true,
+		// 		calendars: [
+		// 			{
+		// 				fetchInterval: 7 * 24 * 60 * 60 * 1000,
+		// 				symbol: "calendar-check",
+		// 				url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics",
+		// 				color: "red",
+		// 				name: "us_holiday"
+		// 			}
+		// 		]
+		// 	}
+		// },
 		{
 			module: "weather",
 			position: "top_right",
@@ -91,6 +104,24 @@ let config = {
 				type: "forecast",
 				lat: 42.460597,
 				lon: -83.651491
+			}
+		},
+		{
+			module: "MMM-Wallpaper",
+			position: "fullscreen_below",
+			config: {
+				updateInterval: 0,
+				unsplashAPIKey: "t-MSdzuBbn3d-CGBLzPbrYVSBMkNX41cIq8hmQnHSVk",
+				query: false,
+				collectionIDs: false,
+				userName: false,
+				photoID: false,
+				autoDim: true,
+				brightImageOpacity: 0.85,
+				imageOrientation: "landscape",
+				imageWidth: "auto",
+				imageHeight: "auto",
+				imageOptions: "fit=fill&fill=blur"
 			}
 		}
 	]
