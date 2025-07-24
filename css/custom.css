@@ -43,3 +43,16 @@
   z-index: 0;
   pointer-events: none;
 }
+
+.CX3 .weekend {
+  color: pink;
+  font-weight: bold;
+}
+
+.CX3 .weekend_2 {
+  color: pink;
+}
+
+.CX3 .weekend_1 {
+  color: pink;
+}
