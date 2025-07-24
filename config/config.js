@@ -59,7 +59,7 @@ let config = {
 				accessToken: "a27b456c40049b64dcd0ee956a825b690a3136e0",
 				maximumEntries: 60,
 				updateInterval: 5 * 60 * 1000,
-				displayAvatar: true,
+				displayAvatar: false,
 				showProject: false,
 				displayTasksWithinDays: 0,
 				maxTitleLength: 40,
