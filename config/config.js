@@ -115,7 +115,7 @@ let config = {
 				instanceId: "basicCalendar",
 				locale: "en-US",
 				maxEventLines: 5,
-				firstDayOfWeek: 1,
+				firstDayOfWeek: 0,
 				calendarSet: ["us_holiday", "abfall", "mytest"],
 				weekIndex: 0,
 				weeksInView: 2
