@@ -9,129 +9,129 @@
  * see https://docs.magicmirror.builders/configuration/introduction.html#enviromnent-variables
  */
 let config = {
-  address: "localhost", // Address to listen on, can be:
-  // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
-  // - another specific IPv4/6 to listen on a specific interface
-  // - "0.0.0.0", "::" to listen on any interface
-  // Default, when address config is left out or empty, is "localhost"
-  port: 8080,
-  basePath: "/", // The URL path where MagicMirror² is hosted. If you are using a Reverse proxy
-  // you must set the sub path here. basePath must end with a /
-  ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
-  // or add a specific IPv4 of 192.168.1.5 :
-  // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
-  // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
-  // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+	address: "localhost", // Address to listen on, can be:
+	// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
+	// - another specific IPv4/6 to listen on a specific interface
+	// - "0.0.0.0", "::" to listen on any interface
+	// Default, when address config is left out or empty, is "localhost"
+	port: 8080,
+	basePath: "/", // The URL path where MagicMirror² is hosted. If you are using a Reverse proxy
+	// you must set the sub path here. basePath must end with a /
+	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
+	// or add a specific IPv4 of 192.168.1.5 :
+	// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
+	// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
+	// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
-  useHttps: false, // Support HTTPS or not, default "false" will use HTTP
-  httpsPrivateKey: "", // HTTPS private key path, only require when useHttps is true
-  httpsCertificate: "", // HTTPS Certificate path, only require when useHttps is true
+	useHttps: false, // Support HTTPS or not, default "false" will use HTTP
+	httpsPrivateKey: "", // HTTPS private key path, only require when useHttps is true
+	httpsCertificate: "", // HTTPS Certificate path, only require when useHttps is true
 
-  language: "en",
-  locale: "en-US",
-  logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
-  timeFormat: 12,
-  units: "imperial",
-  modules: [
-    {
-      module: "alert"
-    },
-    {
-      module: "updatenotification",
-      position: "top_bar"
-    },
-    {
-      module: "clock",
-      position: "top_left",
-      config: {
-        timeFormat: 12,
-        timezone: "America/New_York",
-        displaySeconds: false,
-        showPeriodUpper: true
-      }
-    },
-    {
-      module: "MMM-Todoist",
-      position: "top_left",
-      header: "Todo",
-      config: {
-        hideWhenEmpty: false,
-        accessToken: "ef9c4fd2f2d86488a221b9545502c9254f5185c0",
-        maximumEntries: 60,
-        updateInterval: 5 * 60 * 1000,
-        displayAvatar: false,
-        showProject: false,
-        displayTasksWithinDays: 0,
-        maxTitleLength: 40,
-        wrapEvents: true,
-        fade: false,
-        projects: ["6cQfqG8Ww3wQC7FJ"]
-      }
-    },
-    {
-      module: "calendar",
-      header: "US Holidays",
-      position: "top_left",
-      config: {
-        broadcastPastEvents: true,
-        calendars: [
-          {
-            fetchInterval: 7 * 24 * 60 * 60 * 1000,
-            symbol: "calendar-check",
-            url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics",
-            color: "red",
-            name: "us_holiday"
-          },
-          {
-            fetchInterval: 7 * 24 * 60 * 60 * 1000,
-            symbol: "calendar-check",
-            url: "https://calendar.google.com/calendar/ical/mbussert%40gmail.com/private-8d70532d7c6581ae712380114d44ba9b/basic.ics",
-            color: "green",
-            name: "mike_calendar"
-          }
-        ]
-      }
-    },
-    {
-      module: "weather",
-      position: "top_right",
-      config: {
-        weatherProvider: "openmeteo",
-        type: "current",
-        lat: "42.460597",
-        lon: "-83.651491"
-      }
-    },
-    {
-      module: "weather",
-      position: "top_right",
-      header: "Weather Forecast",
-      config: {
-        weatherProvider: "openmeteo",
-        type: "forecast",
-        lat: "42.460597",
-        lon: "-83.651491"
-      }
-    },
-    {
-      module: "MMM-CalendarExt3",
-      position: "bottom_bar",
-      title: "Bussert Family Calendar",
-      config: {
-        mode: "week",
-        instanceId: "basicCalendar",
-        locale: "en-US",
-        maxEventLines: 5,
-        firstDayOfWeek: 0,
-        calendarSet: ["us_holiday", "mike_calendar"],
-        weekIndex: 0,
-        weeksInView: 2
-      }
-    }
-  ]
+	language: "en",
+	locale: "en-US",
+	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
+	timeFormat: 12,
+	units: "imperial",
+	modules: [
+		{
+			module: "alert"
+		},
+		{
+			module: "updatenotification",
+			position: "top_bar"
+		},
+		{
+			module: "clock",
+			position: "top_left",
+			config: {
+				timeFormat: 12,
+				timezone: "America/New_York",
+				displaySeconds: false,
+				showPeriodUpper: true
+			}
+		},
+		{
+			module: "MMM-Todoist",
+			position: "top_left",
+			header: "Todo",
+			config: {
+				hideWhenEmpty: false,
+				accessToken: "REDACTED",
+				maximumEntries: 60,
+				updateInterval: 5 * 60 * 1000,
+				displayAvatar: false,
+				showProject: false,
+				displayTasksWithinDays: 0,
+				maxTitleLength: 40,
+				wrapEvents: true,
+				fade: false,
+				projects: ["REDACTED"]
+			}
+		},
+		{
+			module: "calendar",
+			header: "US Holidays",
+			position: "top_left",
+			config: {
+				broadcastPastEvents: true,
+				calendars: [
+					{
+						fetchInterval: 7 * 24 * 60 * 60 * 1000,
+						symbol: "calendar-check",
+						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics",
+						color: "red",
+						name: "us_holiday"
+					},
+					{
+						fetchInterval: 7 * 24 * 60 * 60 * 1000,
+						symbol: "calendar-check",
+						url: "REDACTED",
+						color: "green",
+						name: "mike_calendar"
+					}
+				]
+			}
+		},
+		{
+			module: "weather",
+			position: "top_right",
+			config: {
+				weatherProvider: "openmeteo",
+				type: "current",
+				lat: "REDACTED",
+				lon: "REDACTED"
+			}
+		},
+		{
+			module: "weather",
+			position: "top_right",
+			header: "Weather Forecast",
+			config: {
+				weatherProvider: "openmeteo",
+				type: "forecast",
+				lat: "REDACTED",
+				lon: "REDACTED"
+			}
+		},
+		{
+			module: "MMM-CalendarExt3",
+			position: "bottom_bar",
+			title: "Bussert Family Calendar",
+			config: {
+				mode: "week",
+				instanceId: "basicCalendar",
+				locale: "en-US",
+				maxEventLines: 5,
+				firstDayOfWeek: 0,
+				calendarSet: ["us_holiday", "mike_calendar"],
+				weekIndex: 0,
+				weeksInView: 2
+			}
+		}
+	]
 };
 
 /*************** DO NOT EDIT THE LINE BELOW ***************/
 if (typeof module !== "undefined") {
-  module.exports = config;
+	module.exports = config;
 }
