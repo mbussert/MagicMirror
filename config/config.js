@@ -81,6 +81,13 @@ let config = {
 						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics",
 						color: "red",
 						name: "us_holiday"
+					},
+					{
+						fetchInterval: 7 * 24 * 60 * 60 * 1000,
+						symbol: "calendar-check",
+						url: "https://calendar.google.com/calendar/ical/mbussert%40gmail.com/private-93cdf712f1cafd8b14b10fc6d1f2ad0c/basic.ics",
+						color: "green",
+						name: "mike_calendar"
 					}
 				]
 			}
@@ -109,14 +116,14 @@ let config = {
 		{
 			module: "MMM-CalendarExt3",
 			position: "bottom_bar",
-			title: "My Test Calendar",
+			title: "Bussert Family Calendar",
 			config: {
 				mode: "week",
 				instanceId: "basicCalendar",
 				locale: "en-US",
 				maxEventLines: 5,
 				firstDayOfWeek: 0,
-				calendarSet: ["us_holiday", "abfall", "mytest"],
+				calendarSet: ["us_holiday", "mike_calendar"],
 				weekIndex: 0,
 				weeksInView: 2
 			}
