@@ -56,7 +56,7 @@ let config = {
       header: "Todo",
       config: {
         hideWhenEmpty: false,
-        accessToken: "ef9c4fd2f2d86488a221b9545502c9254f5185c0",
+        accessToken: "${MIKE_TODOIST_API}",
         maximumEntries: 60,
         updateInterval: 5 * 60 * 1000,
         displayAvatar: false,
@@ -65,7 +65,7 @@ let config = {
         maxTitleLength: 40,
         wrapEvents: true,
         fade: false,
-        projects: ["6cQfqG8Ww3wQC7FJ"]
+        projects: ["${MIKE_TODOIST_PROJECT}"]
       }
     },
     {
@@ -85,7 +85,7 @@ let config = {
           {
             fetchInterval: 7 * 24 * 60 * 60 * 1000,
             symbol: "calendar-check",
-            url: "https://calendar.google.com/calendar/ical/mbussert%40gmail.com/private-8d70532d7c6581ae712380114d44ba9b/basic.ics",
+            url: "${MIKE_GOOGLE_CAL}",
             color: "green",
             name: "mike_calendar"
           }
@@ -98,8 +98,8 @@ let config = {
       config: {
         weatherProvider: "openmeteo",
         type: "current",
-        lat: "42.460597",
-        lon: "-83.651491"
+        lat: "${HOME_LAT}",
+        lon: "${HOME_LONG}"
       }
     },
     {
@@ -109,8 +109,8 @@ let config = {
       config: {
         weatherProvider: "openmeteo",
         type: "forecast",
-        lat: "42.460597",
-        lon: "-83.651491"
+        lat: "${HOME_LAT}",
+        lon: "${HOME_LONG}"
       }
     },
     {
