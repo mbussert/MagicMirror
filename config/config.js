@@ -56,7 +56,7 @@ let config = {
 			header: "Todo",
 			config: {
 				hideWhenEmpty: false,
-				accessToken: "a27b456c40049b64dcd0ee956a825b690a3136e0",
+				accessToken: "",
 				maximumEntries: 60,
 				updateInterval: 5 * 60 * 1000,
 				displayAvatar: false,
@@ -85,7 +85,7 @@ let config = {
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/mbussert%40gmail.com/private-93cdf712f1cafd8b14b10fc6d1f2ad0c/basic.ics",
+						url: "",
 						color: "green",
 						name: "mike_calendar"
 					}
@@ -98,8 +98,8 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "current",
-				lat: 42.460597,
-				lon: -83.651491
+				lat: 0,
+				lon: 0
 			}
 		},
 		{
@@ -109,8 +109,8 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "forecast",
-				lat: 42.460597,
-				lon: -83.651491
+				lat: 0,
+				lon: 0
 			}
 		},
 		{
