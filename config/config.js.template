@@ -65,7 +65,7 @@ let config = {
         maxTitleLength: 40,
         wrapEvents: true,
         fade: false,
-        projects: ["${MIKE_TODOIST_PROJECT}"]
+        projects: ["${MIKE_TODOIST_PROJECT}", "${LIAM_TODOIST_PROJECT}", "${CLAIRE_TODOIST_PROJECT}"]
       }
     },
     {
