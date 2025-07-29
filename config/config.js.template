@@ -53,16 +53,17 @@ let config = {
     {
       module: "MMM-Todoist",
       position: "top_left",
-      header: "Todo",
+      header: "Family Todos",
       config: {
         hideWhenEmpty: false,
         accessToken: "${MIKE_TODOIST_API}",
         maximumEntries: 60,
         updateInterval: 5 * 60 * 1000,
         displayAvatar: false,
-        showProject: false,
-        displayTasksWithinDays: 0,
+        showProject: true,
+        displayTasksWithinDays: -1,
         maxTitleLength: 40,
+        sortType: "dueDateDescPriority",
         wrapEvents: true,
         fade: false,
         projects: ["${MIKE_TODOIST_PROJECT}", "${LIAM_TODOIST_PROJECT}", "${CLAIRE_TODOIST_PROJECT}"]
