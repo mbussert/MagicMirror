@@ -58,7 +58,7 @@ let config = {
         hideWhenEmpty: false,
         accessToken: "${MIKE_TODOIST_API}",
         maximumEntries: 60,
-        updateInterval: 5 * 60 * 1000,
+        updateInterval: 1 * 60 * 1000,
         displayAvatar: false,
         showProject: true,
         displayTasksWithinDays: -1,
