@@ -28,8 +28,8 @@
   --gap-modules: 30px;
 }
 
-.custom-background {
-  position: fixed;
+/* .custom-background { */
+/* position: fixed;
   top: var(--gap-body-top);
   left: var(--gap-body-left);
   width: calc(100vw - var(--gap-body-left) - var(--gap-body-right));
@@ -37,12 +37,12 @@
   background: url("imgs/background3.jpg") no-repeat center center fixed;
   background-size: cover;
   /* filter: grayscale(50%); */
-  opacity: 0.8;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+/* opacity: 0.8;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); */
 
-  z-index: 0;
-  pointer-events: none;
-}
+/* z-index: 0;
+  pointer-events: none; */
+/* } */
 
 .CX3 .weekend {
   color: white;
